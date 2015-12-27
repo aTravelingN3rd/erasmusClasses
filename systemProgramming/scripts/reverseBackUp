@@ -1,0 +1,25 @@
+#!/bin/bash
+#This script makes the reverse stuff than the previous script 
+
+BACKUPDIR=$HOME/archives
+
+#If the path isn't write as argument, we ask for it
+if [ $# -eq 0 ];then
+	echo "Welcome to the reverse backUp script"
+	echo "Please, enter the name of the tar.gz file you want to retrieve"
+	read GZFILE
+else
+	GZFILE=$1
+fi
+
+TARFILE=`basename $GZFILE .gz`
+
+#rm $GZIPFILE
+#scp user@server:$GZFILE $BACKUPDIR
+
+cd $BACKUPDIR
+
+gzip -d $GZFILE
+
+tar xf $TARFILE
+rm $TARFILE
