@@ -14,7 +14,7 @@ if [ ! -f $userFile ];then
 	exit;
 fi 
 
-#We modify the file format to use the command newusers
+#We modify the file format to use the command newusers 
 k=1000; while IFS=: read userID firstname surname; do
 	echo "$userID:$surname:$k:1000:$userID:/home/$userID:/bin/bash";let k++;
 	done < $userFile > newUsers.txt
