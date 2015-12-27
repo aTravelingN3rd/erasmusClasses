@@ -28,7 +28,7 @@ public class RankSort
 			x[i] = rand.nextInt(1000); 
 		
 		//We use this line to get the total time of the calculation for our performance experiments
-		long start = System.currentTimeMillis();
+		long start = System.currentTimeMillis(); 
 		
 		//We create the threads
 		RankSortThread threads[] = new RankSortThread[nbThreads];
