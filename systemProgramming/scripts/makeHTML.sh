@@ -3,12 +3,12 @@
 
 echo "<HTML>"
 echo "<HEAD>"
-echo "  <TITLE>"
-echo "  Bienvenue sur votre espace personnel"
-echo "  </TITLE>"
-echo "</HEAD>"
-echo ""
+echo "<TITLE>"
+echo "Welcome in your personal space"
+echo "</TITLE>"
+echo "<HEAD>"
 echo "<BODY>"
-echo "  Bonjour $1 $2"
+echo "Hello $1 $2"
 echo "</BODY>"
 echo "</HTML>"
+
