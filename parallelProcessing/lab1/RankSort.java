@@ -26,10 +26,13 @@ public class RankSort
 		//we put random number in the tab to increase the difficulty
 		for(int i = 0; i < pbSize; i++)
 			x[i] = rand.nextInt(1000); 
-
+		
+		//We use this line to get the total time of the calculation for our performance experiments
+		long start = System.currentTimeMillis();
+		
 		//We create the threads
 		RankSortThread threads[] = new RankSortThread[nbThreads];
-		
+
 		//We give each thread a part of the job
 		for(int i = 0; i < nbThreads; i++) 
 		{
@@ -69,6 +72,11 @@ public class RankSort
 				}			
 			}
 		}
+		
+		// Get elapsed time in milliseconds
+		long elapsedTimeMillis = System.currentTimeMillis()-start;
+		// Get elapsed time in seconds
+		float elapsedTimeSec = elapsedTimeMillis/1000F; 
 		
 		for(int i = 0; i < pbSize; i++) 
 		{	
