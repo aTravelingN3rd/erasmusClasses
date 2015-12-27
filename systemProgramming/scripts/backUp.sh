@@ -1,6 +1,6 @@
 #!/bin/bash
 #This script makes a backUp of a choosen directory 
-
+ 
 BACKUPDIR=$HOME/archives
 
 #If the path isn't write as argument, we ask for it
